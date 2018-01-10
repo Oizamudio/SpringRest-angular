@@ -1,0 +1,48 @@
+  <div class="container">
+    <h3 class="container text-center">
+      Actualizar
+    </h3>
+    
+
+
+  <!-- FORMULARIO UPDATE -->
+  <form (submit)="updateUser()" ngNativeValidate>
+    <div class="form-row">
+        <div class="form-group col-md-12 hidden">
+            <input type="hidden" name="id" [(ngModel)]="usuario.id" class="form-control hidden" id="id">
+        </div>
+      </div>
+    <div class="form-row">
+      <div class="input-group form-group col-md-12">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="text" name="nombre" [(ngModel)]="usuario.name" class="form-control" id="nombre" placeholder="Nombre">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-group form-group col-md-12">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="text" name="apellidos" [(ngModel)]="usuario.lastname" class="form-control" id="apellidos" placeholder="Apellidos">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-group form-group col-md-12">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+          <input type="text" name="mail" [(ngModel)]="usuario.mail" class="form-control" id="mail" placeholder="Mail">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-group form-group col-md-12">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-hourglass"></i></span>
+          <input type="number" name="edad" [(ngModel)]="usuario.age" class="form-control" id="edad" placeholder="Edad">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-group form-group col-md-12">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+          <input type="text" name="telefono" [(ngModel)]="usuario.telephone" class="form-control" id="telefono" placeholder="Telefono">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary">Update user</button>
+  </form>
+</div>

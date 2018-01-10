@@ -1,0 +1,37 @@
+<h3 class="container text-center">
+  {{titulo}}
+</h3>
+
+<!--TABLA USUARIOS-->
+<table class="container table-default">
+  
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>LastName</th>
+      <th>Mail</th>
+      <th>Age</th>
+      <th>Telephone</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  
+  <tbody *ngFor='let user of users'>
+      <tr #linea>
+      <th #id>{{user.id}}</th>
+      <td #name>{{user.name}}</td>
+      <td #lastname>{{user.lastname}}</td>
+      <td #mail>{{user.mail}}</td>
+      <td #age>{{user.age}}</td>
+      <td #telephone >{{user.telephone}}</td>
+      
+      <button type="button" (click)="modalinfo(id.innerText,name.innerText,lastname.innerText,mail.innerText,age.innerText,telephone.innerText)" class="btn btn-warning" data-toggle="modal" data-target="#UpdateModal"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Update</button>&nbsp;
+      <button type="button" (click)="deleteUser(id.innerText)" class="btn btn-danger"><span class="glyphicon glyphicon-erase"></span>&nbsp;Delete</button>
+    </tr>
+
+  </tbody>
+  <a class="btn btn-default" href="users/addForm" role="button">Add new User</a>
+  <!--<button type="button" class="btn btn-outline-secondary"><a routerLink="addForm">Add new User</a></button>-->
+</table>
+
